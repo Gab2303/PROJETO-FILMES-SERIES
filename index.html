@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CinemaClub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container" id="cover-container">
+        <div class="cover-content">
+            <h1>CinemaClub</h1>
+            <p>Gabriela Barbosa</p>
+            <p>Novembro 2024</p>
+            <button onclick="toggleForms('login')">Login</button>
+        </div>
+        <img src="imag/pipoca.png" alt="Pipoca" class="cover-image">
+    </div>
+
+    <div class="container" id="login-container" style="display: none;">
+        <h2>Login</h2>
+        <input type="text" id="login-username" placeholder="Usuário" required>
+        <input type="password" id="login-password" placeholder="Senha" required>
+        <button onclick="login()">Entrar</button>
+        <p>Não tem uma conta? <a href="#" onclick="toggleForms('signup')">Cadastre-se</a></p>
+    </div>
+
+    <div class="container" id="signup-container" style="display: none;">
+        <h2>Cadastro</h2>
+        <input type="text" id="signup-username" placeholder="Usuário" required>
+        <input type="password" id="signup-password" placeholder="Senha" required>
+        <button onclick="signup()">Registrar-se</button>
+        <p>Já tem uma conta? <a href="#" onclick="toggleForms('login')">Faça Login</a></p>
+    </div>
+
+    <div class="container" id="gallery-container" style="display: none;">
+        <h2>Galeria de Filmes e Séries</h2>
+    </div>
+
+    <div class="container" id="review-container" style="display: none;">
+        <h2>Avalie um Filme ou Série</h2>
+        <input type="text" id="title-input" placeholder="Nome do Filme ou Série" required>
+        <textarea id="review-text" placeholder="Escreva seu comentário" required></textarea>
+        <button onclick="submitReview()">Enviar Avaliação</button>
+        <ul id="review-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

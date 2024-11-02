@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CinemaClub.avaliações</title>
+    <link rel="stylesheet" href="avaliação.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>CinemaClub</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="galeriafilmes.html">Galeria de Filmes</a>
+                <a href="avaliação.html">Avaliações</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="container" id="review-container">
+        <h2>Avalie um Filme ou Série</h2>
+        <input type="text" id="title-input" placeholder="Nome do Filme ou Série" required>
+        
+        <textarea id="review-text" placeholder="Escreva seu comentário" required></textarea>
+        <button onclick="submitReview()">Enviar Avaliação</button>
+
+        <div id="reviews">
+            <h3>Avaliações:</h3>
+            <ul id="review-list"></ul>
+        </div>
+    </div>
+
+    <div id="gallery-container" style="display: none;">
+        <h2>Galeria de Filmes e Séries</h2>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
